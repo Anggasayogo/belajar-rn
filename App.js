@@ -6,7 +6,7 @@ const App = () => {
   return(
     // menggunakan scroll
     <ScrollView>
-      <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'red' }}>
+      <View style={styles.wrapper}>
       <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'yellow'}}>
         <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is Graduation</Text>
         {/* ini memanggil image secara local yang berada di folder assets */}
@@ -36,6 +36,14 @@ const App = () => {
     </View>
     </ScrollView>
   );
+}
+
+const styles = {
+  wrapper : {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: 'red' 
+  }
 }
 
 export default App;
