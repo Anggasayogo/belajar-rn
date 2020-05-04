@@ -1,12 +1,40 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View,Text,Image,ScrollView} from 'react-native';
+// import scrollview
 
 const App = () => {
   return(
-    <View style={{flex: 1, flexDirection: 'row', backgroundColor: 'red' }}>
-      <View style={{ flex: 1, height: 100, backgroundColor: 'yellow'}}></View>
-      <View style={{ flex: 1, height: 100, backgroundColor: 'green'}}></View>
+    // menggunakan scroll
+    <ScrollView>
+      <View style={{flex: 1, flexDirection: 'column', backgroundColor: 'red' }}>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'yellow'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is Graduation</Text>
+        {/* ini memanggil image secara local yang berada di folder assets */}
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={require('./assets/slider_1.jpg')}/>
+      </View>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'green'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is work from home</Text>
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={require('./assets/slide_2.jpg')}/>
+      </View>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'black'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is smile</Text>
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={require('./assets/slide_3.jpg')}/>
+      </View>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'purple'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is programing </Text>
+        {/* ini memanggil image secara global yang ada di internent */}
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={{uri: 'https://reactjs.org/logo-og.png'}}/>
+      </View>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'yellow'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is Graduation</Text>
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={require('./assets/slider_1.jpg')}/>
+      </View>
+      <View style={{alignItems: 'center', width: '100%', height: 200, backgroundColor: 'green'}}>
+        <Text style={{ marginVertical: 10, fontSize: 20, color: 'white'}}>This is work from home</Text>
+        <Image style={{ width: 200, height: 100, backgroundColor: 'red'}} source={require('./assets/slide_2.jpg')}/>
+      </View>
     </View>
+    </ScrollView>
   );
 }
 
