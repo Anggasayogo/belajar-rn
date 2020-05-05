@@ -1,15 +1,17 @@
 import React, { useEffect } from 'react';
-import { View, Text} from 'react-native';
+import { View, Text, Image} from 'react-native';
+import { AuthBg } from '../../assets';
 
 const Splash = ({navigation}) =>{
     useEffect(() => {
         setTimeout(() => {
-            navigation.navigate('Login');
-        },7000)
+            navigation.navigate('Auth');
+        },4000)
     })
     return(
-        <View>
-            <Text>Splash Screen</Text>
+        <View style={{ flex: 1,justifyContent: 'center', backgroundColor: 'white'}}>
+            <Image source={AuthBg} style={{width: 250, height: 300}}/>
+            <Text style={{marginTop: 20,textAlign: 'center', fontSize: 20,color: 'purple'}}>Welcome To Splash Screen..</Text>
         </View>
     );
 }
